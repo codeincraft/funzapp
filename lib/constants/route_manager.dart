@@ -6,7 +6,9 @@ import 'package:funz/presentations/Request/request_money2.dart';
 import 'package:funz/presentations/home_screen/dashboard.dart';
 import 'package:funz/presentations/home_screen/swap.dart';
 import 'package:funz/presentations/send/find_beneficiary.dart';
+import 'package:funz/presentations/send/search_for_friends.dart';
 import 'package:funz/presentations/send/send.dart';
+import 'package:funz/presentations/send/send_money_internationally.dart';
 import 'package:funz/presentations/send/share_receipt.dart';
 import 'package:funz/presentations/splash_screen.dart';
 
@@ -40,6 +42,8 @@ class RoutesManager {
   static const String sendMoney = "/sendMoney";
   static const String findBenefiary = "/findBenefiary";
   static const String shareReceipt = "/shareReceipt";
+  static const String sendMoneyInternationally = "/sendMoneyInternationally";
+  static const String searchForFriends = "/searchForFriends";
 
   // SETTINGS
   static const String accountInfoRoute = "/accountInfoRoute";
@@ -97,6 +101,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const FindBeneficiary());
       case RoutesManager.shareReceipt:
         return MaterialPageRoute(builder: (_) => const ShareReceipt());
+      case RoutesManager.sendMoneyInternationally:
+        return MaterialPageRoute(builder: (_) => const SendMoneyInternationally());
+      case RoutesManager.searchForFriends:
+        return MaterialPageRoute(builder: (_) => const SearchForFriends());
       // case RoutesManager.introRoute:
       //   return MaterialPageRoute(builder: (_) => const IntroView());
       // case RoutesManager.loginRoute:

@@ -7,8 +7,8 @@ import 'package:funz/widgets/app_button.dart';
 import 'package:funz/widgets/custom_appbar.dart';
 import 'package:gap/gap.dart';
 
-class RequestMoney2 extends StatelessWidget {
-  const RequestMoney2({super.key});
+class SendMoneyInternationally extends StatelessWidget {
+  const SendMoneyInternationally({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +22,8 @@ class RequestMoney2 extends StatelessWidget {
         backgroundColor: ColorManager.kScaffoldB,
         appBar: CustomAppBar(
           title: Text(
-            'Request Money',
-            style: get17TextStyle(fontSize: 20),
+            'Send Money',
+            style: get17TextStyle(fontSize: 17),
           ),
           actions: [
             Icon(
@@ -43,6 +43,7 @@ class RequestMoney2 extends StatelessWidget {
                 //  Gap(10),
                 Container(
                   height: 74,
+                  padding: EdgeInsets.symmetric(vertical: 5),
                   width: screenWidth,
                   decoration: BoxDecoration(
                       border: Border.all(
@@ -50,6 +51,7 @@ class RequestMoney2 extends StatelessWidget {
                       ),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
                         padding:
@@ -82,34 +84,34 @@ class RequestMoney2 extends StatelessWidget {
                       ),
                       Gap(10),
                       Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          // Gap(10),
                           Text(
-                            'You are requesting',
+                            'You are sending',
                             style: get14TextStyle(fontSize: 13),
                           ),
-                          Expanded(
-                            child: SizedBox(
-                              height: 40,
-                              width: 180,
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  alignLabelWithHint: true,
-                                  hintText: '200,000',
-                                  hintStyle: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    color: ColorManager.kTitleText,
-                                  ), // Customize hint text color if needed
-                                  border: InputBorder.none, // Remove the border
-                                  filled: false, // Remove background color
-                                  contentPadding: EdgeInsets.symmetric(
-                                      horizontal: 20), // Adjust padding as needed
-                                ),
-                                keyboardType: TextInputType
-                                    .number, // Set keyboard type to number
+                          SizedBox(
+                            height: 30,
+                            width: 180,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                alignLabelWithHint: true,
+                                hintText: '200,000',
+                                hintStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: ColorManager.kTitleText,
+                                ), // Customize hint text color if needed
+                                border: InputBorder.none, // Remove the border
+                                filled: false, // Remove background color
+                                contentPadding: EdgeInsets.symmetric(
+                                  vertical: 0,
+                                    horizontal: 0), // Adjust padding as needed
                               ),
+                              keyboardType: TextInputType
+                                  .number, // Set keyboard type to number
                             ),
                           ),
                           // Text('200,000', style: get17TextStyle(
@@ -121,37 +123,39 @@ class RequestMoney2 extends StatelessWidget {
                   ),
                 ),
                 Gap(40),
-                SizedBox(
-                  height: 60,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: ColorManager.kbackground,
-                      hintText: 'Description (Optional)',
-                      hintStyle: TextStyle(color: Colors.grey, fontSize: 12),
-                      contentPadding: EdgeInsets.symmetric(
-                          vertical: 0,
-                          horizontal: 16), // Adjust padding as needed
-                      // prefixIcon: Icon(Icons.search, color: ColorManager.ktext,),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide.none, // Remove border
-                      ),
-                    ),
-                    style: TextStyle(
-                        color: Colors.black), // Adjust text color as needed
-                    cursorColor: Colors.black, // Adjust cursor color as needed
-                    keyboardType:
-                        TextInputType.text, // Adjust keyboard type as needed
-                    maxLines: 1, // Ensure single line
-                    minLines: 1, // Ensure single line
+               Row(
+                children: [
+                  CircleAvatar(
+                    radius: 18,
+                    backgroundColor: ColorManager.kIconBackground.withOpacity(0.2),
+                    child: Icon(Icons.remove, size: 15,),
                   ),
-                ),
-          
-                Spacer(),
+                  Gap(10),
+                  Text('No fees', style: get12TextStyle(
+                    color: ColorManager.ktext,
+                    fontSize: 16
+                  ),)
+                ],
+               ),
+                Gap(10),
+               Row(
+                children: [
+                  CircleAvatar(
+                    radius: 18,
+                    backgroundColor: ColorManager.kIconBackground.withOpacity(0.2),
+                    child: Icon(Icons.electric_bolt_outlined, size: 15,),
+                  ),
+                  Gap(10),
+                  Text('Instantly', style: get12TextStyle(
+                    color: ColorManager.ktext,
+                    fontSize: 16
+                  ),)
+                ],
+               ),
+            Gap(100),
                 AppButton(
                   onTap: () {
-                    Navigator.pushNamed(context, RoutesManager.dashboardRoute);
+                    Navigator.pushNamed(context, RoutesManager.searchForFriends);
                   },
                   text: 'Continue',
                   height: 50,

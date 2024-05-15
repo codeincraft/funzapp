@@ -32,31 +32,36 @@ class SendMoney extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                height: 74,
-                width: screenWidth,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: ColorManager.kbackground,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Send Money Internationally', style: get17TextStyle(
-                          fontSize: 16,
-                        ),),
-                        Text('Up to 10 countries available', style: get12TextStyle(
-                           color: ColorManager.ktext,
-                        ),),
-                      ],),
-                      Icon(Icons.arrow_forward_ios_rounded, size: 16,),
-                  ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, RoutesManager.sendMoneyInternationally);
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  height: 74,
+                  width: screenWidth,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: ColorManager.kbackground,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Send Money Internationally', style: get17TextStyle(
+                            fontSize: 16,
+                          ),),
+                          Text('Up to 10 countries available', style: get12TextStyle(
+                             color: ColorManager.ktext,
+                          ),),
+                        ],),
+                        Icon(Icons.arrow_forward_ios_rounded, size: 16,),
+                    ],
+                  ),
                 ),
               ),
               Gap(20),

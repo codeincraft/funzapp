@@ -20,6 +20,7 @@ class AppTextField extends StatelessWidget {
   final Color? color;
   final Color? backgroundColor;
   final Color? borderColor;
+  final Color? focusColor;
   final Color? enabledBorderColor;
   final String? errorText;
   final VoidCallback? onTap;
@@ -54,6 +55,7 @@ class AppTextField extends StatelessWidget {
       this.autovalidateMode,
       this.padding,
       this.color,
+      this.focusColor
       });
 
   @override
@@ -62,22 +64,27 @@ class AppTextField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(text,
-              style: TextStyle(
-                  fontSize: 14,
-                  wordSpacing: 1,
-                  fontWeight: FontWeight.w400,
-                  color: ColorManager.ktext),
-              maxLines: 2),
-          SizedBox(
-            height: 5,
-          ),
-          SizedBox(
-            height: 45,
+          // Text(text,
+          //     style: TextStyle(
+          //         fontSize: 14,
+          //         wordSpacing: 1,
+          //         fontWeight: FontWeight.w400,
+          //         color: ColorManager.ktext),
+          //     maxLines: 2),
+          // SizedBox(
+          //   height: 5,
+          // ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            height: 60,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: ColorManager.kbackground
+            ),
             child: TextFormField(
               scrollPadding: EdgeInsets.symmetric(
                 vertical: 5,
-                horizontal: 10,
+                horizontal: 20,
               ),
               
               maxLines: maxLines ?? 1,
@@ -98,6 +105,7 @@ class AppTextField extends StatelessWidget {
                   suffixIcon: suffixIcon,
                   suffix: suffix,
                   prefixIcon: prefixIcon,
+                
                   prefixIconConstraints:
                       BoxConstraints.tight(const Size(20, 20)),
                   alignLabelWithHint: true,
@@ -116,16 +124,16 @@ class AppTextField extends StatelessWidget {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(7),
                     borderSide: BorderSide(
-                      color: color ?? Colors.transparent,
+                      color: focusColor ?? Colors.transparent,
                     ),
                   ),
                   hintText: hintText,
                   hintStyle: TextStyle(
-                      fontSize: 14,
-                      wordSpacing: 1,
+                      fontSize: 13,
+                      wordSpacing: 0,
                       fontWeight: FontWeight.w400,
                       color: ColorManager.ktext),
-                  fillColor: fillColor ?? Colors.transparent),
+                  fillColor: fillColor ?? Colors.red),
               enabled: true,
             ),
           ),

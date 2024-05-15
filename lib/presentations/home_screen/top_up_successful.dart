@@ -3,6 +3,7 @@ import 'package:funz/constants/color_manager.dart';
 import 'package:funz/constants/route_manager.dart';
 import 'package:funz/constants/style_manager.dart';
 import 'package:funz/widgets/app_button.dart';
+import 'package:funz/widgets/success_icon.dart';
 import 'package:gap/gap.dart';
 
 class TopUpSuccessful extends StatefulWidget {
@@ -67,24 +68,7 @@ class _TopUpSuccessfulState extends State<TopUpSuccessful> {
                     ],
                   ),
                   Gap(30),
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    height: 120,
-                    width: 120,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: ColorManager.kTitleText.withOpacity(0.1)
-                      ),
-                      shape: BoxShape.circle,
-                    color: ColorManager.kWhite.withOpacity(0.3),
-                    ),
-                    child: CircleAvatar(
-                    backgroundColor: ColorManager.kIconB,
-                    child: Icon(Icons.check_circle, color: ColorManager.kbackgroundblue,
-                    size: 50,
-                    ),
-                    ),
-                  ),
+                 SuccessIcon(),
                   Gap(18),
                   // Credit or Debit Card
                   Text('Top-Up Successful',

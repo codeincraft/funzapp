@@ -95,7 +95,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           scrolledUnderElevation: widget.scrolledUnderElevation ?? 0,
           shadowColor: widget.shadowColor ?? Colors.transparent,
           shape: widget.shape,
-          backgroundColor: widget.backgroundColor ?? ColorManager.kbackground,
+          backgroundColor: widget.backgroundColor ?? ColorManager.kScaffoldB,
           foregroundColor: widget.foregroundColor,
           iconTheme: widget.iconTheme,
           actionsIconTheme: widget.actionsIconTheme,

@@ -159,7 +159,7 @@ class _TopUp2State extends State<TopUp2> {
                   AppButton(
                     onTap: () {
                              showModalBottomSheet(
-                          barrierColor: ColorManager.kbackgroundblue.withOpacity(0.5),
+                          barrierColor: ColorManager.kbackgroundblue.withOpacity(0.0),
                           context: context, 
                           isDismissible: false,
                            isScrollControlled: true,
