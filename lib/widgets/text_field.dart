@@ -76,7 +76,7 @@ class AppTextField extends StatelessWidget {
           // ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            height: 60,
+            height: 40,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: ColorManager.kbackground

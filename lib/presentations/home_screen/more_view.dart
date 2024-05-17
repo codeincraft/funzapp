@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:funz/constants/color_manager.dart';
 import 'package:funz/constants/style_manager.dart';
 import 'package:funz/gen/assets.gen.dart';
+import 'package:funz/presentations/more/loans.dart';
+import 'package:funz/presentations/more/pay_bills.dart';
+import 'package:funz/presentations/more/qr_code.dart';
+import 'package:funz/presentations/more/savings_and_investment.dart';
 import 'package:gap/gap.dart';
 
 class MoreView extends StatefulWidget {
@@ -46,24 +50,48 @@ class _MoreViewState extends State<MoreView> {
                     ),
                   ),
                   Gap(40),
-                  Text(
-                    'Savings and Investments',
-                    style: get18TextStyle(color: ColorManager.kTitleText),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SavingsAndInvestment()));
+                    },
+                    child: Text(
+                      'Savings and Investments',
+                      style: get18TextStyle(color: ColorManager.kTitleText),
+                    ),
                   ),
                   Gap(20),
-                  Text(
-                    'Use QR Code',
-                    style: get18TextStyle(color: ColorManager.kTitleText),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (builder)=> QRCodeScrean()));
+                    },
+                    child: Text(
+                      'Use QR Code',
+                      style: get18TextStyle(color: ColorManager.kTitleText),
+                    ),
                   ),
                   Gap(20),
-                  Text(
-                    'Pay Bills',
-                    style: get18TextStyle(color: ColorManager.kTitleText),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (builder) => PayBills()));
+                    },
+                    child: Text(
+                      'Pay Bills',
+                      style: get18TextStyle(color: ColorManager.kTitleText),
+                    ),
                   ),
                   Gap(20),
-                  Text(
-                    'Loans',
-                    style: get18TextStyle(color: ColorManager.kTitleText),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (conext)=> LoanScreen()));
+                    },
+                    child: Text(
+                      'Loans',
+                      style: get18TextStyle(color: ColorManager.kTitleText),
+                    ),
                   ),
                   Gap(20),
                   Text(
@@ -76,7 +104,7 @@ class _MoreViewState extends State<MoreView> {
                     style: get18TextStyle(color: ColorManager.kTitleText),
                   ),
                   Gap(20),
-                  
+
                   Gap(20)
                 ],
               ),

@@ -61,7 +61,7 @@ class _MyAppState extends State<FunZApp> {
     return  MaterialApp(
           debugShowCheckedModeBanner: false,
           onGenerateRoute: RouteGenerator.getRoute,
-          initialRoute: RoutesManager.dashboardRoute,
+          initialRoute: RoutesManager.onBoardingRoute,
           theme: getApplicationTheme(),
         
       

@@ -23,6 +23,10 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   flutter_custom_clippers: ^2.1.0
+  card_swiper: ^3.0.1
+  slide_action: ^0.0.2
+  smooth_page_indicator: ^1.1.0
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:

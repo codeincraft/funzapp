@@ -17,8 +17,8 @@ class _TopUpState extends State<TopUp> {
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
       expand: false,
-      initialChildSize: 0.7,
-      maxChildSize: 0.7,
+      initialChildSize: 0.65,
+      maxChildSize: 0.68,
       minChildSize: 0.45,
       builder: ((context, scrollController) {
         return SingleChildScrollView(
@@ -26,7 +26,7 @@ class _TopUpState extends State<TopUp> {
             padding: EdgeInsets.zero,
             controller: scrollController,
             child: Container(
-              height: 470,
+              height: 500,
               width: double.infinity,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(

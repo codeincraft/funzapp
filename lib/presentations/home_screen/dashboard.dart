@@ -256,12 +256,14 @@ class _DashBoardState extends State<DashBoard> {
                                   ),
                                   child: Assets.images.electricity.image()),
                                   Gap(10),
-                                  Text('Electricity',
-                                  style: get14TextStyle(
-                                    color: ColorManager.kTitleText,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold
-                                  ),),
+                                  FittedBox(
+                                    child: Text('Electricity',
+                                    style: get14TextStyle(
+                                      color: ColorManager.kTitleText,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold
+                                    ),),
+                                  ),
                               ],
                             ),
                           ),
@@ -282,12 +284,14 @@ class _DashBoardState extends State<DashBoard> {
                                   ),
                                   child: Assets.images.phone.image()),
                                   Gap(10),
-                                  Text('Entertainment',
-                                  style: get14TextStyle(
-                                    color: ColorManager.kTitleText,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold
-                                  ),),
+                                  FittedBox(
+                                    child: Text('Entertainment',
+                                    style: get14TextStyle(
+                                      color: ColorManager.kTitleText,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold
+                                    ),),
+                                  ),
                               ],
                             ),
                           ),

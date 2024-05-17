@@ -249,14 +249,47 @@ class $AssetsImagesGen {
   AssetGenImage get group26819 =>
       const AssetGenImage('assets/images/Group 26819.png');
 
+  /// File path: assets/images/Logo1.png
+  AssetGenImage get logo1 => const AssetGenImage('assets/images/Logo1.png');
+
+  /// File path: assets/images/Swap-2.png
+  AssetGenImage get swap2 => const AssetGenImage('assets/images/Swap-2.png');
+
+  /// File path: assets/images/accountlimit.png
+  AssetGenImage get accountlimit =>
+      const AssetGenImage('assets/images/accountlimit.png');
+
   /// File path: assets/images/add.png
   AssetGenImage get add => const AssetGenImage('assets/images/add.png');
+
+  /// File path: assets/images/addicon.png
+  AssetGenImage get addicon => const AssetGenImage('assets/images/addicon.png');
+
+  /// File path: assets/images/airtel.png
+  AssetGenImage get airtel => const AssetGenImage('assets/images/airtel.png');
 
   /// File path: assets/images/america.png
   AssetGenImage get america => const AssetGenImage('assets/images/america.png');
 
+  /// File path: assets/images/atm.png
+  AssetGenImage get atm => const AssetGenImage('assets/images/atm.png');
+
+  /// File path: assets/images/atm2.png
+  AssetGenImage get atm2 => const AssetGenImage('assets/images/atm2.png');
+
+  /// File path: assets/images/atmcardamount.png
+  AssetGenImage get atmcardamount =>
+      const AssetGenImage('assets/images/atmcardamount.png');
+
+  /// File path: assets/images/betnaija.png
+  AssetGenImage get betnaija =>
+      const AssetGenImage('assets/images/betnaija.png');
+
   /// File path: assets/images/betting.png
   AssetGenImage get betting => const AssetGenImage('assets/images/betting.png');
+
+  /// File path: assets/images/betway.png
+  AssetGenImage get betway => const AssetGenImage('assets/images/betway.png');
 
   /// File path: assets/images/bro.png
   AssetGenImage get bro => const AssetGenImage('assets/images/bro.png');
@@ -271,6 +304,13 @@ class $AssetsImagesGen {
   /// File path: assets/images/car_loan.png
   AssetGenImage get carLoan =>
       const AssetGenImage('assets/images/car_loan.png');
+
+  /// File path: assets/images/card_icon.png
+  AssetGenImage get cardIcon =>
+      const AssetGenImage('assets/images/card_icon.png');
+
+  /// File path: assets/images/carloan.png
+  AssetGenImage get carloan => const AssetGenImage('assets/images/carloan.png');
 
   /// File path: assets/images/credit_card_loan.png
   AssetGenImage get creditCardLoan =>
@@ -288,25 +328,106 @@ class $AssetsImagesGen {
   AssetGenImage get entertainment =>
       const AssetGenImage('assets/images/entertainment.png');
 
+  /// File path: assets/images/finance_icon.png
+  AssetGenImage get financeIcon =>
+      const AssetGenImage('assets/images/finance_icon.png');
+
+  /// File path: assets/images/flight.png
+  AssetGenImage get flight => const AssetGenImage('assets/images/flight.png');
+
+  /// File path: assets/images/fluent_eye-hide-24-regular.png
+  AssetGenImage get fluentEyeHide24Regular =>
+      const AssetGenImage('assets/images/fluent_eye-hide-24-regular.png');
+
+  /// File path: assets/images/getFunzBusiness.png
+  AssetGenImage get getFunzBusiness =>
+      const AssetGenImage('assets/images/getFunzBusiness.png');
+
+  /// File path: assets/images/getloan.png
+  AssetGenImage get getloan => const AssetGenImage('assets/images/getloan.png');
+
+  /// File path: assets/images/giftcardloan.png
+  AssetGenImage get giftcardloan =>
+      const AssetGenImage('assets/images/giftcardloan.png');
+
+  /// File path: assets/images/glo.png
+  AssetGenImage get glo => const AssetGenImage('assets/images/glo.png');
+
   /// File path: assets/images/grass.png
   AssetGenImage get grass => const AssetGenImage('assets/images/grass.png');
+
+  /// File path: assets/images/helpcenter.png
+  AssetGenImage get helpcenter =>
+      const AssetGenImage('assets/images/helpcenter.png');
+
+  /// File path: assets/images/home_icon.png
+  AssetGenImage get homeIcon =>
+      const AssetGenImage('assets/images/home_icon.png');
+
+  /// File path: assets/images/homeloan.png
+  AssetGenImage get homeloan =>
+      const AssetGenImage('assets/images/homeloan.png');
+
+  /// File path: assets/images/instanticon.png
+  AssetGenImage get instanticon =>
+      const AssetGenImage('assets/images/instanticon.png');
 
   /// File path: assets/images/internent.png
   AssetGenImage get internent =>
       const AssetGenImage('assets/images/internent.png');
 
+  /// File path: assets/images/invest.png
+  AssetGenImage get invest => const AssetGenImage('assets/images/invest.png');
+
+  /// File path: assets/images/jointsavings.png
+  AssetGenImage get jointsavings =>
+      const AssetGenImage('assets/images/jointsavings.png');
+
   /// File path: assets/images/kenya.png
   AssetGenImage get kenya => const AssetGenImage('assets/images/kenya.png');
+
+  /// File path: assets/images/letshaveafinancialride.png
+  AssetGenImage get letshaveafinancialride =>
+      const AssetGenImage('assets/images/letshaveafinancialride.png');
+
+  /// File path: assets/images/livescores.png
+  AssetGenImage get livescores =>
+      const AssetGenImage('assets/images/livescores.png');
+
+  /// File path: assets/images/lock.png
+  AssetGenImage get lock => const AssetGenImage('assets/images/lock.png');
+
+  /// File path: assets/images/mingcute_close-line.png
+  AssetGenImage get mingcuteCloseLine =>
+      const AssetGenImage('assets/images/mingcute_close-line.png');
+
+  /// File path: assets/images/minusicon.png
+  AssetGenImage get minusicon =>
+      const AssetGenImage('assets/images/minusicon.png');
 
   /// File path: assets/images/more.png
   AssetGenImage get more => const AssetGenImage('assets/images/more.png');
 
+  /// File path: assets/images/mtn.png
+  AssetGenImage get mtn => const AssetGenImage('assets/images/mtn.png');
+
   /// File path: assets/images/nigeria.png
   AssetGenImage get nigeria => const AssetGenImage('assets/images/nigeria.png');
+
+  /// File path: assets/images/onexbet.png
+  AssetGenImage get onexbet => const AssetGenImage('assets/images/onexbet.png');
 
   /// File path: assets/images/overdraft.png
   AssetGenImage get overdraft =>
       const AssetGenImage('assets/images/overdraft.png');
+
+  /// File path: assets/images/overdraft1.png
+  AssetGenImage get overdraft1 =>
+      const AssetGenImage('assets/images/overdraft1.png');
+
+  /// File path: assets/images/paybiils.png
+  AssetGenImage get paybiils =>
+      const AssetGenImage('assets/images/paybiils.png');
 
   /// File path: assets/images/phone.png
   AssetGenImage get phone => const AssetGenImage('assets/images/phone.png');
@@ -314,8 +435,20 @@ class $AssetsImagesGen {
   /// File path: assets/images/profile.png
   AssetGenImage get profile => const AssetGenImage('assets/images/profile.png');
 
+  /// File path: assets/images/profileBarcode.png
+  AssetGenImage get profileBarcode =>
+      const AssetGenImage('assets/images/profileBarcode.png');
+
   /// File path: assets/images/qrcode.png
   AssetGenImage get qrcode => const AssetGenImage('assets/images/qrcode.png');
+
+  /// File path: assets/images/rateandfees.png
+  AssetGenImage get rateandfees =>
+      const AssetGenImage('assets/images/rateandfees.png');
+
+  /// File path: assets/images/referearn.png
+  AssetGenImage get referearn =>
+      const AssetGenImage('assets/images/referearn.png');
 
   /// File path: assets/images/requestFromAFriend.png
   AssetGenImage get requestFromAFriend =>
@@ -324,6 +457,21 @@ class $AssetsImagesGen {
   /// File path: assets/images/requestLink.png
   AssetGenImage get requestLink =>
       const AssetGenImage('assets/images/requestLink.png');
+
+  /// File path: assets/images/save.png
+  AssetGenImage get save => const AssetGenImage('assets/images/save.png');
+
+  /// File path: assets/images/savedcard.png
+  AssetGenImage get savedcard =>
+      const AssetGenImage('assets/images/savedcard.png');
+
+  /// File path: assets/images/saveforbusiness.png
+  AssetGenImage get saveforbusiness =>
+      const AssetGenImage('assets/images/saveforbusiness.png');
+
+  /// File path: assets/images/savetowards.png
+  AssetGenImage get savetowards =>
+      const AssetGenImage('assets/images/savetowards.png');
 
   /// File path: assets/images/savingscard-2.png
   AssetGenImage get savingscard2 =>
@@ -353,6 +501,22 @@ class $AssetsImagesGen {
   AssetGenImage get savingsoptions =>
       const AssetGenImage('assets/images/savingsoptions.png');
 
+  /// File path: assets/images/search_icon.png
+  AssetGenImage get searchIcon =>
+      const AssetGenImage('assets/images/search_icon.png');
+
+  /// File path: assets/images/security.png
+  AssetGenImage get security =>
+      const AssetGenImage('assets/images/security.png');
+
+  /// File path: assets/images/settings_icon.png
+  AssetGenImage get settingsIcon =>
+      const AssetGenImage('assets/images/settings_icon.png');
+
+  /// File path: assets/images/sidelock.png
+  AssetGenImage get sidelock =>
+      const AssetGenImage('assets/images/sidelock.png');
+
   /// File path: assets/images/sittingroom.png
   AssetGenImage get sittingroom =>
       const AssetGenImage('assets/images/sittingroom.png');
@@ -361,9 +525,20 @@ class $AssetsImagesGen {
   AssetGenImage get southAfrica =>
       const AssetGenImage('assets/images/southAfrica.png');
 
+  /// File path: assets/images/sporty.png
+  AssetGenImage get sporty => const AssetGenImage('assets/images/sporty.png');
+
   /// File path: assets/images/sportybet.png
   AssetGenImage get sportybet =>
       const AssetGenImage('assets/images/sportybet.png');
+
+  /// File path: assets/images/statement.png
+  AssetGenImage get statement =>
+      const AssetGenImage('assets/images/statement.png');
+
+  /// File path: assets/images/studentloan.png
+  AssetGenImage get studentloan =>
+      const AssetGenImage('assets/images/studentloan.png');
 
   /// File path: assets/images/swap.png
   AssetGenImage get swap => const AssetGenImage('assets/images/swap.png');
@@ -371,36 +546,93 @@ class $AssetsImagesGen {
   /// File path: assets/images/top_up.png
   AssetGenImage get topUp => const AssetGenImage('assets/images/top_up.png');
 
+  /// File path: assets/images/transact_globally.png
+  AssetGenImage get transactGlobally =>
+      const AssetGenImage('assets/images/transact_globally.png');
+
+  /// File path: assets/images/verified.png
+  AssetGenImage get verified =>
+      const AssetGenImage('assets/images/verified.png');
+
   /// File path: assets/images/visibility.png
   AssetGenImage get visibility =>
       const AssetGenImage('assets/images/visibility.png');
+
+  /// File path: assets/images/welcomeback.png
+  AssetGenImage get welcomeback =>
+      const AssetGenImage('assets/images/welcomeback.png');
+
+  /// File path: assets/images/yourprofile.png
+  AssetGenImage get yourprofile =>
+      const AssetGenImage('assets/images/yourprofile.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
         ghana,
         group26819,
+        logo1,
+        swap2,
+        accountlimit,
         add,
+        addicon,
+        airtel,
         america,
+        atm,
+        atm2,
+        atmcardamount,
+        betnaija,
         betting,
+        betway,
         bro,
         building,
         cabletv,
         carLoan,
+        cardIcon,
+        carloan,
         creditCardLoan,
         dropDown,
         electricity,
         entertainment,
+        financeIcon,
+        flight,
+        fluentEyeHide24Regular,
+        getFunzBusiness,
+        getloan,
+        giftcardloan,
+        glo,
         grass,
+        helpcenter,
+        homeIcon,
+        homeloan,
+        instanticon,
         internent,
+        invest,
+        jointsavings,
         kenya,
+        letshaveafinancialride,
+        livescores,
+        lock,
+        mingcuteCloseLine,
+        minusicon,
         more,
+        mtn,
         nigeria,
+        onexbet,
         overdraft,
+        overdraft1,
+        paybiils,
         phone,
         profile,
+        profileBarcode,
         qrcode,
+        rateandfees,
+        referearn,
         requestFromAFriend,
         requestLink,
+        save,
+        savedcard,
+        saveforbusiness,
+        savetowards,
         savingscard2,
         savingscard,
         savingsoption,
@@ -408,12 +640,23 @@ class $AssetsImagesGen {
         savingsoptions3,
         savingsoptions4,
         savingsoptions,
+        searchIcon,
+        security,
+        settingsIcon,
+        sidelock,
         sittingroom,
         southAfrica,
+        sporty,
         sportybet,
+        statement,
+        studentloan,
         swap,
         topUp,
-        visibility
+        transactGlobally,
+        verified,
+        visibility,
+        welcomeback,
+        yourprofile
       ];
 }
 

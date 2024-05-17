@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:funz/bottom_navigation_bar.dart';
 import 'package:funz/presentations/Request/get_paid_via_link.dart';
 import 'package:funz/presentations/Request/request_from_a_friend.dart';
 import 'package:funz/presentations/Request/request_money.dart';
 import 'package:funz/presentations/Request/request_money2.dart';
 import 'package:funz/presentations/home_screen/dashboard.dart';
 import 'package:funz/presentations/home_screen/swap.dart';
+import 'package:funz/presentations/onBoarding/first_onboarding.dart';
+import 'package:funz/presentations/onBoarding/onboarding.dart';
 import 'package:funz/presentations/send/find_beneficiary.dart';
 import 'package:funz/presentations/send/search_for_friends.dart';
 import 'package:funz/presentations/send/send.dart';
@@ -27,6 +30,8 @@ class RoutesManager {
   static const String passwordResetStatusRoute = "/passwordResetStatusRoute";
 
   //
+
+  static const String onBoardingRoute = "/onboardingScreen";
   static const String dashboardRoute = "/dashboardRoute";
   static const String notificationRoute = "/notificationRoute";
 
@@ -82,7 +87,7 @@ class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case RoutesManager.splashRoute:
-        return MaterialPageRoute(builder: (_) => const SplashScreen());
+        return MaterialPageRoute(builder: (_) => const BottomNavigationBarScreen());
       case RoutesManager.dashboardRoute:
         return MaterialPageRoute(builder: (_) => const DashBoard());
       case RoutesManager.swapMoney:
@@ -105,6 +110,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const SendMoneyInternationally());
       case RoutesManager.searchForFriends:
         return MaterialPageRoute(builder: (_) => const SearchForFriends());
+      case RoutesManager.onBoardingRoute:
+        return MaterialPageRoute(builder: (_) => const OnBoardingScreen());
       // case RoutesManager.introRoute:
       //   return MaterialPageRoute(builder: (_) => const IntroView());
       // case RoutesManager.loginRoute:
