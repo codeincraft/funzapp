@@ -60,8 +60,10 @@ class _DashBoardState extends State<DashBoard> {
         ),
         actions: [
           CircleAvatar(
-            backgroundColor: ColorManager.kIconBackground.withOpacity(0.3),
-            child: Icon(Icons.notification_add_outlined),
+            backgroundColor: ColorManager.kIconBackground.withOpacity(0.15),
+            child: Assets.images.iconoirBellnotification2.image(
+              height: 20
+            ),
           )
         ],
       ),
@@ -77,34 +79,45 @@ class _DashBoardState extends State<DashBoard> {
                 Gap(40),
                 Container(
                   height: 50,
+                  width: screenWidth,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      AppButton(
-                        onTap: (){
-                          Navigator.pushNamed(context, RoutesManager.requestMoney);;
-                        }, 
-                        text: 'Request',
-                        height: 50,
-                        width: 147,
-                        borderColor: ColorManager.kborder,
-                        borderRadius: 15,
-                        textColor: ColorManager.ktext,
-                        fontWeight: FontWeight.bold,
+                      Expanded(
+                        child: AppButton(
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, RoutesManager.requestMoney);
+                            ;
+                          },
+                          text: 'Request',
+                          height: 50,
+                          width: 147,
+                          borderColor: ColorManager.kborder,
+                          borderRadius: 15,
+                          textColor: ColorManager.ktext,
+                          fontWeight: FontWeight.bold,
+                          fontsize: 17,
                         ),
-                      AppButton(
-                        onTap: (){
-                          Navigator.pushNamed(context, RoutesManager.sendMoney);
-                        }, 
-                        text: 'Send',
-                        height: 50,
-                        width: 147,
-                        buttonColor: ColorManager.kbackgroundblue,
-                        borderColor: ColorManager.kborder,
-                        borderRadius: 15,
-                        textColor: ColorManager.kbackground,
-                        fontWeight: FontWeight.bold,
+                      ),
+                      Gap(25),
+                      Expanded(
+                        child: AppButton(
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, RoutesManager.sendMoney);
+                          },
+                          text: 'Send',
+                          height: 50,
+                          width: 147,
+                          buttonColor: ColorManager.kbackgroundblue,
+                          borderColor: ColorManager.kborder,
+                          borderRadius: 15,
+                          textColor: ColorManager.kbackground,
+                          fontWeight: FontWeight.bold,
+                          fontsize: 17,
                         ),
+                      ),
                     ],
                   ),
                 ),
@@ -123,7 +136,11 @@ class _DashBoardState extends State<DashBoard> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('QUICK PAY OPTIONS'),
+                      Text('QUICK PAY OPTIONS',
+                      style: get17TextStyle(
+                        fontSize: 13,
+                        color: ColorManager.kbuttonColor
+                      ),),
                       Gap(15),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -134,23 +151,24 @@ class _DashBoardState extends State<DashBoard> {
                             child: Column(
                               children: [
                                 Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: ColorManager.kborder.withOpacity(0.20)
-                                    ),
-                                    shape: BoxShape.circle,
-                                    color: ColorManager.kWhite
-                                  ),
-                                  child: Assets.images.phone.image()),
-                                  Gap(10),
-                                  Text('Airtime',
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: ColorManager.kborder
+                                                .withOpacity(0.20)),
+                                        shape: BoxShape.circle,
+                                        color: ColorManager.kWhite),
+                                    child: Assets.images.phone.image()),
+                                Gap(10),
+                                Text(
+                                  'Airtime',
                                   style: get14TextStyle(
-                                    color: ColorManager.kTitleText,
+                                    color: ColorManager.kbuttonColor,
                                     fontSize: 13,
                                     fontWeight: FontWeight.bold,
-                                  ),),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -160,23 +178,24 @@ class _DashBoardState extends State<DashBoard> {
                             child: Column(
                               children: [
                                 Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: ColorManager.kborder.withOpacity(0.20)
-                                    ),
-                                    shape: BoxShape.circle,
-                                    color: ColorManager.kWhite
-                                  ),
-                                  child: Assets.images.cabletv.image()),
-                                  Gap(10),
-                                  Text('Cable TV',
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: ColorManager.kborder
+                                                .withOpacity(0.20)),
+                                        shape: BoxShape.circle,
+                                        color: ColorManager.kWhite),
+                                    child: Assets.images.cabletv.image()),
+                                Gap(10),
+                                Text(
+                                  'Cable TV',
                                   style: get14TextStyle(
-                                    color: ColorManager.kTitleText,
+                                     color: ColorManager.kbuttonColor,
                                     fontSize: 13,
                                     fontWeight: FontWeight.bold,
-                                  ),),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -186,23 +205,24 @@ class _DashBoardState extends State<DashBoard> {
                             child: Column(
                               children: [
                                 Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: ColorManager.kborder.withOpacity(0.20)
-                                    ),
-                                    shape: BoxShape.circle,
-                                    color: ColorManager.kWhite
-                                  ),
-                                  child: Assets.images.internent.image()),
-                                  Gap(10),
-                                  Text('Internet',
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: ColorManager.kborder
+                                                .withOpacity(0.20)),
+                                        shape: BoxShape.circle,
+                                        color: ColorManager.kWhite),
+                                    child: Assets.images.internent.image()),
+                                Gap(10),
+                                Text(
+                                  'Internet',
                                   style: get14TextStyle(
-                                    color: ColorManager.kTitleText,
+                                    color: ColorManager.kbuttonColor,
                                     fontSize: 13,
                                     fontWeight: FontWeight.bold,
-                                  ),),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -219,23 +239,23 @@ class _DashBoardState extends State<DashBoard> {
                             child: Column(
                               children: [
                                 Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: ColorManager.kborder.withOpacity(0.20)
-                                    ),
-                                    shape: BoxShape.circle,
-                                    color: ColorManager.kWhite
-                                  ),
-                                  child: Assets.images.betting.image()),
-                                  Gap(10),
-                                  Text('Betting',
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: ColorManager.kborder
+                                                .withOpacity(0.20)),
+                                        shape: BoxShape.circle,
+                                        color: ColorManager.kWhite),
+                                    child: Assets.images.betting.image()),
+                                Gap(10),
+                                Text(
+                                  'Betting',
                                   style: get14TextStyle(
-                                    color: ColorManager.kTitleText,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold
-                                  ),),
+                                      color: ColorManager.kbuttonColor,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ],
                             ),
                           ),
@@ -245,25 +265,25 @@ class _DashBoardState extends State<DashBoard> {
                             child: Column(
                               children: [
                                 Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: ColorManager.kborder.withOpacity(0.20)
-                                    ),
-                                    shape: BoxShape.circle,
-                                    color: ColorManager.kWhite
-                                  ),
-                                  child: Assets.images.electricity.image()),
-                                  Gap(10),
-                                  FittedBox(
-                                    child: Text('Electricity',
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: ColorManager.kborder
+                                                .withOpacity(0.20)),
+                                        shape: BoxShape.circle,
+                                        color: ColorManager.kWhite),
+                                    child: Assets.images.electricity.image()),
+                                Gap(10),
+                                FittedBox(
+                                  child: Text(
+                                    'Electricity',
                                     style: get14TextStyle(
-                                      color: ColorManager.kTitleText,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold
-                                    ),),
+                                        color: ColorManager.kbuttonColor,
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold),
                                   ),
+                                ),
                               ],
                             ),
                           ),
@@ -273,25 +293,25 @@ class _DashBoardState extends State<DashBoard> {
                             child: Column(
                               children: [
                                 Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: ColorManager.kborder.withOpacity(0.20)
-                                    ),
-                                    shape: BoxShape.circle,
-                                    color: ColorManager.kWhite
-                                  ),
-                                  child: Assets.images.phone.image()),
-                                  Gap(10),
-                                  FittedBox(
-                                    child: Text('Entertainment',
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: ColorManager.kborder
+                                                .withOpacity(0.20)),
+                                        shape: BoxShape.circle,
+                                        color: ColorManager.kWhite),
+                                    child: Assets.images.entertainment.image()),
+                                Gap(10),
+                                FittedBox(
+                                  child: Text(
+                                    'Entertainment',
                                     style: get14TextStyle(
-                                      color: ColorManager.kTitleText,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold
-                                    ),),
+                                        color: ColorManager.kTitleText,
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold),
                                   ),
+                                ),
                               ],
                             ),
                           ),

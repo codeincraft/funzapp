@@ -20,8 +20,8 @@ class _MoreViewState extends State<MoreView> {
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
       expand: false,
-      initialChildSize: 0.53,
-      maxChildSize: 0.53,
+      initialChildSize: 0.60,
+      maxChildSize: 0.60,
       minChildSize: 0.45,
       builder: ((context, scrollController) {
         return SingleChildScrollView(
@@ -29,12 +29,14 @@ class _MoreViewState extends State<MoreView> {
             padding: EdgeInsets.zero,
             controller: scrollController,
             child: Container(
-              height: 400,
+              height: 484,
               width: double.infinity,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                   color: ColorManager.kbackground,
-                  borderRadius: BorderRadius.circular(20)),
+                   borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(40),
+                                  topRight: Radius.circular(40)),),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -42,14 +44,16 @@ class _MoreViewState extends State<MoreView> {
                   Align(
                     alignment: Alignment.center,
                     child: Container(
-                      height: 6,
+                      height: 7,
                       width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorManager.kborder),
+                      child: Assets.images.slideicon.image(),
+                      // decoration: BoxDecoration(
+                      //     borderRadius: BorderRadius.circular(10),
+                      //     color: ColorManager.kborder
+                      //     ),
                     ),
                   ),
-                  Gap(40),
+                  Gap(30),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -59,20 +63,20 @@ class _MoreViewState extends State<MoreView> {
                     },
                     child: Text(
                       'Savings and Investments',
-                      style: get18TextStyle(color: ColorManager.kTitleText),
+                      style: get18TextStyle(color: ColorManager.kbuttonColor),
                     ),
                   ),
-                  Gap(20),
+                  Gap(30),
                   InkWell(
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (builder)=> QRCodeScrean()));
                     },
                     child: Text(
                       'Use QR Code',
-                      style: get18TextStyle(color: ColorManager.kTitleText),
+                      style: get18TextStyle(color: ColorManager.kbuttonColor),
                     ),
                   ),
-                  Gap(20),
+                  Gap(30),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
@@ -80,32 +84,32 @@ class _MoreViewState extends State<MoreView> {
                     },
                     child: Text(
                       'Pay Bills',
-                      style: get18TextStyle(color: ColorManager.kTitleText),
+                      style: get18TextStyle(color: ColorManager.kbuttonColor),
                     ),
                   ),
-                  Gap(20),
+                  Gap(30),
                   InkWell(
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (conext)=> LoanScreen()));
                     },
                     child: Text(
                       'Loans',
-                      style: get18TextStyle(color: ColorManager.kTitleText),
+                      style: get18TextStyle(color: ColorManager.kbuttonColor),
                     ),
                   ),
-                  Gap(20),
+                  Gap(30),
                   Text(
                     'Bulk Payments',
-                    style: get18TextStyle(color: ColorManager.kTitleText),
+                    style: get18TextStyle(color: ColorManager.kbuttonColor),
                   ),
-                  Gap(20),
+                  Gap(35),
                   Text(
                     'View Transaction History',
-                    style: get18TextStyle(color: ColorManager.kTitleText),
+                    style: get18TextStyle(color: ColorManager.kbuttonColor),
                   ),
                   Gap(20),
 
-                  Gap(20)
+                  // Gap(20)
                 ],
               ),
             ));

@@ -61,7 +61,7 @@ TextStyle get12TextStyle({double fontSize = FontSize.s12, Color? color, FontWeig
   );
 }
 
-TextStyle get17TextStyle({double fontSize = FontSize.s24, Color? color}) {
+TextStyle get17TextStyle({double fontSize = FontSize.s24, Color? color, FontWeight? fontWeight}) {
   return _getTextStyle(
     fontSize: fontSize,
     color: color ?? ColorManager.kBlack,
@@ -69,11 +69,11 @@ TextStyle get17TextStyle({double fontSize = FontSize.s24, Color? color}) {
   );
 }
 
-TextStyle get28TextStyle({double fontSize = 28, Color? color}) {
+TextStyle get28TextStyle({double fontSize = 28, Color? color, FontWeight? fontWeight}) {
   return _getTextStyle(
     fontSize: fontSize,
     color: color ?? ColorManager.kBlack,
-    fontWeight: FontWeight.w700,
+    fontWeight: fontWeight ??FontWeight.w700,
   );
 }
 

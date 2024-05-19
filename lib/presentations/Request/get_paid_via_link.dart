@@ -17,9 +17,12 @@ class GetPaidViaLink extends StatelessWidget {
     return Scaffold(
       backgroundColor: ColorManager.kScaffoldB,
       appBar: CustomAppBar(
+        leadingWidth: 0,
+        leading: Icon(Icons.arrow_back_ios, color: ColorManager.kbuttonColor, size: 15,),
         title: Text(
           'Request Money',
-          style: get17TextStyle(fontSize: 20),
+          style: get17TextStyle(fontSize: 17,
+          color: ColorManager.kbuttonColor,),
         ),
         actions: [
           Icon(
@@ -35,8 +38,12 @@ class GetPaidViaLink extends StatelessWidget {
         child: Column(
           children: [
             Gap(30),
-            Text('Get paid via a link', style: get17TextStyle(fontSize: 20),),
-            Text('Share your link to get paid by anyone'),
+            Text('Get paid via a link', style: get17TextStyle(fontSize: 15, color: ColorManager.kbuttonColor,),),
+            Text('Share your link to get paid by anyone', style: get12TextStyle(
+              color: ColorManager.ktext,
+              fontWeight: FontWeight.w500,
+              fontSize: 13
+            ),),
             Gap(30),
             Container(
               padding: EdgeInsets.all(10),
@@ -44,7 +51,13 @@ class GetPaidViaLink extends StatelessWidget {
               width: screenWidth,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: ColorManager.kbackground
+                color: ColorManager.kbackground,
+                boxShadow: [
+                  BoxShadow(
+                    color: ColorManager.ktext,
+                    blurRadius: 0.2
+                  )
+                ]
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -54,9 +67,14 @@ class GetPaidViaLink extends StatelessWidget {
                   ),
                   Gap(10),
                   Text('Arinze Usman Ade', style: get17TextStyle(
-                    fontSize: 17,
+                    fontSize: 15,
+                    color: ColorManager.kbuttonColor,
+                    fontWeight: FontWeight.bold
                   ),),
-                  Text('@Arus123'),
+                  Text('@Arus123', style: get12TextStyle(
+                    color: ColorManager.ktext,
+                    fontSize: 15
+                  ),),
                   Gap(20),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
@@ -71,7 +89,13 @@ class GetPaidViaLink extends StatelessWidget {
                       children: [
                         Icon(Icons.copy_sharp, size: 15,),
                         Gap(10),
-                        Text('https://funzapp.com/arus123')
+                        Text('https://funzapp.com/arus123',
+                        style: get12TextStyle(
+                          fontSize: 13,
+                          color:  ColorManager.kbuttonColor,
+                          fontWeight: FontWeight.w500
+                        ),
+                        )
                       ],
                     ),
                   ),
@@ -83,7 +107,7 @@ class GetPaidViaLink extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, RoutesManager.requestMoney);
             },
-            text: 'Continue',
+            text: 'Share your link',
             height: 50,
             width: screenWidth,
             borderColor: ColorManager.kborder,
@@ -91,7 +115,7 @@ class GetPaidViaLink extends StatelessWidget {
             buttonColor: ColorManager.kbuttonColor,
             textColor: ColorManager.kbackground,
             fontWeight: FontWeight.bold,
-            fontsize: 20,
+            fontsize: 17,
           ),
           Gap(50)
           ],

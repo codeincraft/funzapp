@@ -78,11 +78,11 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         unselectedItemColor:  ColorManager.ktext,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-             icon: Assets.images.homeIcon.image(
+             icon: Assets.images.inactivehome.image(
               color: ColorManager.ktext.withOpacity(0.4),
               height: 25.7
              ),
-                activeIcon: Assets.images.homeIcon.image(
+                activeIcon: Assets.images.activehome.image(
                   color: ColorManager.kBlack,
                   height: 25.7
                 ), 
@@ -91,33 +91,35 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
               // activeIcon: Assets.icons.houseColor.svg(width: 24, height: 24),
               // label: 'Home'),
           BottomNavigationBarItem(
-              icon: Assets.images.financeIcon.image(
-                color: ColorManager.ktext,
-                height: 25.7
+              icon: Assets.images.inactivepayment.image(
+                // color: ColorManager.ktext,
+                height: 23.2
               ),
-                activeIcon: Assets.images.financeIcon.image(
-                   color: ColorManager.kBlack,
-                   height: 25.7
+                activeIcon: Assets.images.activepayment.image(
+                    // color: ColorManager.kbuttonColor,
+                  height: 23.2
                 ),
-                label: 'Finance'),
+                label: 'Finance'
+                ),
           BottomNavigationBarItem(
-               icon: Assets.images.cardIcon.image(
-                height: 25.7
+               icon: Assets.images.inactivecard.image(
+                color: ColorManager.ktext,
+                height: 23.2
                ),
-                activeIcon: Assets.images.cardIcon.image(
-                  height: 25.7,
-                   color: ColorManager.kBlack,
+                activeIcon: Assets.images.activecard.image(
+                  color: ColorManager.kbuttonColor,
+                  height: 23.2
 
                 ),
                 label: 'Card' ),
           BottomNavigationBarItem(
-              icon: Assets.images.settingsIcon.image(
-                color: ColorManager.ktext.withOpacity(0.3),
-                height: 25.7
+              icon: Assets.images.inactivesettings.image(
+                color: ColorManager.ktext,
+                height: 23.2
               ),
-                activeIcon: Assets.images.settingsIcon.image(
-                   color: ColorManager.kBlack,
-                  height: 25.7
+                activeIcon: Assets.images.activesettings.image(
+                   color: ColorManager.kbuttonColor,
+                  height: 23.2
                 ),
                 label: 'Settings' )
         ],

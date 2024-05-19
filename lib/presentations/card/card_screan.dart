@@ -23,20 +23,36 @@ class CardScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                // Gap(20),
+                Gap(20),
                 Text('Card',
                 style: get17TextStyle(
-                  fontSize: 15
+                  fontSize: 17,
+                  color: ColorManager.kbuttonColor,
+                  fontWeight: FontWeight.bold
                 ),),
                 Gap(20),
-                Assets.images.atm2.image(),
+                SizedBox(
+                  height: 200,
+                  width: 330,
+                  child: Image(
+                    fit: BoxFit.fill,
+                    image: AssetImage(
+                       Assets.images.atm2.path)
+                      ),
+                    ),
+          
                 Gap(20),
                 Text('Funz Mastercard',
                 style: get17TextStyle(
-                  fontSize: 15,
+                  fontSize: 17,
                   color: ColorManager.kTitleText
                 ),),
                 Text('Make you eligible to perfomr online shopping\nand subscription',
+                style: get16TextStyle(
+                  fontSize: 15,
+                  color: ColorManager.ktext,
+                  fontWeight: FontWeight.w500
+                ),
                 textAlign: TextAlign.center,),
                 Gap(20),
                 Container(
@@ -45,7 +61,13 @@ class CardScreen extends StatelessWidget {
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
                     color: ColorManager.kbackground,
-                    borderRadius: BorderRadius.circular(20)
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: ColorManager.ktext,
+                        blurRadius: 0.2,
+                      )
+                    ]
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,47 +75,52 @@ class CardScreen extends StatelessWidget {
                       Text('Card Purchase Fee',
                       style: get16TextStyle(
                         fontSize: 13,
-                        fontWeight: FontWeight.w500
+                        fontWeight: FontWeight.w500,
+                        color: ColorManager.ktext
                       ),
                       ),
-                      Gap(5),
+                      Gap(10),
                       Container(
                         height: 19.8,
                         width: 52,
                         padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: ColorManager.kbuttonColor,
                           borderRadius: BorderRadius.circular(15)
                         ),
-                        child: FittedBox(child: Text('N1,200.00', style: get12TextStyle(color: Colors.white, fontSize: 7, fontWeight: FontWeight.w500),)),
+                        child: FittedBox(child: Text('N1,200.00', style: get12TextStyle(color: Colors.white, fontSize: 7.7, fontWeight: FontWeight.bold),)),
                       ),
                       Gap(15),
-                      Text('Charges'),
+                      Text('Charges',
+                      style: get12TextStyle(
+                        color: ColorManager.ktext,
+                        fontSize: 13,
+                        fontWeight:   FontWeight.w500,
+                      ),),
                       Gap(5),
                       Row(
                         children: [
-                          Text('Top-Up Fee:',style: get12TextStyle(color: ColorManager.kTitleText, fontSize: 13, 
+                          Text('Top-Up Fee:',style: get12TextStyle(color: ColorManager.kbuttonColor, fontSize: 13, fontWeight: FontWeight.w500
                           // fontWeight: FontWeight.w500
                           ),),
-                          Text('0.5% (minimum of N300.00)', style: get12TextStyle(color: ColorManager.kTitleText,
-                           fontSize: 13, 
+                          Text('0.5% (minimum of N300.00)', style: get12TextStyle(color: ColorManager.kbuttonColor, fontSize: 13, fontWeight: FontWeight.w500,
+                          //  fontSize: 13, 
                           //  fontWeight: FontWeight.w500
                            ),),
                         ],
                       ),
                       Row(children: [
-                          Text('Monthly maintenance fee:', style: get12TextStyle(color: ColorManager.kTitleText, fontSize: 10,
-                          //  fontWeight: FontWeight.w500
+                          Text('Monthly maintenance fee:', style: get12TextStyle(color: ColorManager.kbuttonColor, fontSize: 13, fontWeight: FontWeight.w500
                            ),),
                           Text(' N100.00', 
-                          style: get12TextStyle(color: ColorManager.kTitleText, fontSize: 13, 
+                          style:  get12TextStyle(color: ColorManager.kbuttonColor, fontSize: 13, fontWeight: FontWeight.w500
                           // fontWeight: FontWeight.w500
                           ),)
                       ],),
                       Gap(15),
                       Text('Security'),
                       Text('Yes',
-                      style: get12TextStyle(color: ColorManager.kTitleText, fontSize: 13,)
+                      style: get12TextStyle(color: ColorManager.kbuttonColor, fontSize: 13, fontWeight: FontWeight.w500)
                       ),  
                     ],
                   ),

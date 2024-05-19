@@ -8,6 +8,7 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   CustomAppBar({
     Key? key,
     this.leading,
+    this.padding,
     this.title,
     this.actions,
     this.flexibleSpace,
@@ -41,6 +42,7 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   final Size preferredSize;
 
   final Widget? leading;
+  final EdgeInsets? padding;
   final Widget? title;
   final List<Widget>? actions;
   final Widget? flexibleSpace;
@@ -81,8 +83,8 @@ class _CustomAppBarState extends State<CustomAppBar> {
     }
 
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal:15.0,
+      padding:   EdgeInsets.symmetric(
+        horizontal: 20,
       vertical: 5
       ),
       child: AppBar(

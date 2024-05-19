@@ -58,7 +58,7 @@ class _LoanScreenState extends State<LoanScreen> {
                     child: Row(
                       children: [
                         Assets.images.searchIcon.image(),
-                        Expanded(
+                        Container(
                           child: AppTextField(
                               controller: controller,
                               hintText: 'Find Loans',

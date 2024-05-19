@@ -7,8 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:funz/constants/color_manager.dart';
 import 'package:funz/constants/style_manager.dart';
+import 'package:funz/presentations/Authentication/signin.dart';
+import 'package:funz/presentations/onBoarding/fift_onboarding.dart';
+import 'package:funz/presentations/onBoarding/financial_ride.dart';
 import 'package:funz/presentations/onBoarding/first_onboarding.dart';
+import 'package:funz/presentations/onBoarding/fourth_onboarding.dart';
 import 'package:funz/presentations/onBoarding/second_onboarding.dart';
+import 'package:funz/presentations/onBoarding/third_onboarding.dart';
+import 'package:funz/widgets/app_button.dart';
+import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -57,32 +64,32 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 // )
               FirstOnBoarding(),
               SecondOnBoarding(),
-              FirstOnBoarding(),
+              ThirdOnBoarding(),
+              FourthOnBoarding(),
+              FifthOnBoardning(),
             ],
           ),
           Container(
             padding: EdgeInsets.symmetric(vertical: 20),
-            alignment: Alignment(0, 0.8),
+            alignment: Alignment(0, 0.6),
             child: SmoothPageIndicator(
               controller: controller, 
-              count: 3,
+              count: 5,
                effect: CustomizableEffect(
                 activeDotDecoration: DotDecoration(
-                  color: ColorManager.kTitleText,
+                  color: ColorManager.kbuttonColor,
                   borderRadius: BorderRadius.circular(10),
-                  width: 12,
-                  height: 12
+                  width: 10,
+                  height: 10
                 ),
                 dotDecoration: DotDecoration(
-                 
-                  
-                   width: 12,
-                height: 12,
+                   width: 10,
+                height: 10,
                 color: Colors.transparent, // Color of the inactive dots
                 borderRadius: BorderRadius.circular(6),
                 dotBorder: DotBorder(
-                  width: 2,
-                  color: ColorManager.kborder
+                  width: 1,
+                  color: ColorManager.ktext
                 ),
                ),
                         // dotColor: Color.fromARGB(255, 195, 195, 195),
@@ -91,103 +98,60 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         // dotWidth: 10,
                         // strokeWidth: 2,
                         
-                        spacing: 20),
+                        spacing: 10),
                     onDotClicked: (index) => controller.animateToPage(index,
                         duration: Duration(milliseconds: 400),
                         curve: Curves.easeIn),
                   ),),
-          
-          //  const SizedBox(height: 10,),
-          // Spacer(),
-          // Container(
-          //   alignment: Alignment(0, 0.90),
-          //   child: Padding(
-          //     padding: const EdgeInsets.symmetric(horizontal: 20),
-          //     child: Row(
-          //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //       children: [
-          //         GestureDetector(
-          //           onTap: () {
-          //             controller.jumpToPage(3);
-          //           },
-          //           child: const Text(
-          //             'Skip',
-          //             style: TextStyle(
-          //               fontSize: 16,
-          //               fontWeight: FontWeight.bold,
-          //             ),
-          //           ),
-          //         ),
-          //         // Spacer(),
-          //         SizedBox(width: 100,),
-          //         // page indicator controlling the bottom dots
-          //         SmoothPageIndicator(
-          //           controller: controller,
-          //           count: 3,
-          //           effect: WormEffect(
-          //               dotColor: Color.fromARGB(255, 195, 195, 195),
-          //               activeDotColor: ColorManager.kTitleText,
-          //               dotHeight: 10,
-          //               dotWidth: 10,
-          //               spacing: 20),
-          //           onDotClicked: (index) => controller.animateToPage(index,
-          //               duration: Duration(milliseconds: 400),
-          //               curve: Curves.easeIn),
-          //         ),
-          //         Spacer(),
-          //         SizedBox(width: 30,),
-          //         // Next or Done
-          //         isLastPage
-          //             ? GestureDetector(
-          //                 onTap: () async {
-          //                   final prefs = await SharedPreferences.getInstance();
-          //                   prefs.setBool('showHome', true);
-          //                   Navigator.pushReplacement(
-          //                       context,
-          //                       MaterialPageRoute(
-          //                           builder: (build) => FirstOnBoarding()));
-          //                 },
-          //                 // Done
-          //                 child: const Text(
-          //                   'Get Started',
-          //                   style: TextStyle(
-          //                     fontSize: 16,
-          //                     fontWeight: FontWeight.bold,
-          //                   ),
-          //                 // ),
-          //               ))
-          //             : GestureDetector(
-          //                 onTap: () {
-          //                   controller.nextPage(
-          //                       duration: Duration(milliseconds: 500),
-          //                       curve: Curves.easeIn);
-          //                 },
-          //                 // Next
 
-          //                 child: Text(
-          //                   'Next',
-          //                   style: get12TextStyle(
-
-          //                   color: 
-          //                   // color.AppColor.primaryColor,
-          //                   Colors.red
-          //                   )
-          //                   // size: 16,
-          //                   // fontWeight: FontWeight.w600,
-          //                 ),)
-          //                 // Text('Hello',),
-          //                 //  Text(
-          //                 //   'Next',
-          //                 //   style: TextStyle(
-          //                 //     fontSize: 16,
-          //                 //     fontWeight: FontWeight.bold,
-          //                 //   ),
-          //                 // ),
-                          
-          //       ],
-          //     ),
-          //   ),
-          // ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child:  Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  AppButton(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(
+                      builder: (builder)=> FinancialRide()));
+              },
+              text: 'Open a new account',
+              height: 50,
+              width: screenWidth,
+              borderColor: ColorManager.kborder,
+              borderRadius: 15,
+              buttonColor: ColorManager.kbuttonColor,
+              textColor: ColorManager.kbackground,
+              fontWeight: FontWeight.w600,
+              fontsize: 15,
+            ),
+            Gap(10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Already have an account?', style: get12TextStyle( 
+                color: ColorManager.kbuttonColor,
+                fontSize: 15),),
+                Gap(5),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (builder)=>SignIn()));
+                  },
+                  child: Text('Sign in', style: get12TextStyle( 
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  color: ColorManager.kbuttonColor,),),
+                ),
+                ],
+            ),
+            Gap(20),
+                ],
+              ),
+            )),
         ],
       ),
     );

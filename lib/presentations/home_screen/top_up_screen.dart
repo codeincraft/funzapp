@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:funz/constants/color_manager.dart';
 import 'package:funz/constants/style_manager.dart';
+import 'package:funz/gen/assets.gen.dart';
 import 'package:funz/presentations/home_screen/top_up_screen2.dart';
 import 'package:funz/widgets/app_button.dart';
 import 'package:gap/gap.dart';
@@ -31,20 +32,18 @@ class _TopUpState extends State<TopUp> {
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                   color: ColorManager.kbackground,
-                  borderRadius: BorderRadius.circular(20)),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(40),
+                    topRight: Radius.circular(40))),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   //Scroll Controller
                   Align(
                     alignment: Alignment.center,
-                    child: Container(
-                      height: 6,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorManager.kborder),
-                    ),
+                    child: Assets.images.slideicon.image(
+                      height: 7,
+                    )
                   ),
                   Gap(40),
                   Row(

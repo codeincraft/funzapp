@@ -27,6 +27,22 @@ dependencies:
   slide_action: ^0.0.2
   smooth_page_indicator: ^1.1.0
   shared_preferences: ^2.2.3
+  flutter_native_splash: ^2.4.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  # ios: true
+  image_path: 'assets/images/appicon.png'
+  # remove_alpha_ios: true
+
+flutter_native_splash:
+  android: true
+  ios: true
+
+  color: '#000574'
+# image: assets/images/Logo1.png
+  background_image: 'assets/images/applogo.png'
 
 dev_dependencies:
   flutter_test:

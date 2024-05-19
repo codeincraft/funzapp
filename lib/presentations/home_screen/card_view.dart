@@ -36,8 +36,14 @@ class _CardViewState extends State<CardView> {
                   context: context,
                   isScrollControlled: true,
                   shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.vertical(top: Radius.circular(30))),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40)
+                      )
+                          // BorderRadius.vertical(
+                            
+                          //   top: Radius.circular(200))
+                            ),
                   builder: (BuildContext context) {
                     return CurrencyView();
                   });
@@ -158,8 +164,9 @@ class _CardViewState extends State<CardView> {
                           context: context,
                           isScrollControlled: true,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.vertical(
-                                  top: Radius.circular(30))),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(40),
+                                  topRight: Radius.circular(40))),
                           builder: (BuildContext context) {
                             return TopUp();
                           });
@@ -214,8 +221,11 @@ class _CardViewState extends State<CardView> {
                           context: context,
                           isScrollControlled: true,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.vertical(
-                                  top: Radius.circular(30))),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(40),
+                                  topRight: Radius.circular(40)),
+                                  
+                                  ),
                           builder: (BuildContext context) {
                             return MoreView();
                           });

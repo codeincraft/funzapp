@@ -21,9 +21,12 @@ class RequestFromAFriend extends StatelessWidget {
       child: Scaffold(
         backgroundColor: ColorManager.kScaffoldB,
         appBar: CustomAppBar(
-          title: Text(
-            'Request Money',
-            style: get17TextStyle(fontSize: 20),
+           leadingWidth: 0,
+        leading: Icon(Icons.arrow_back_ios, color: ColorManager.kbuttonColor, size: 15,),
+        title: Text(
+          'Request Money',
+          style: get17TextStyle(fontSize: 17,
+          color: ColorManager.kbuttonColor,),
           ),
           actions: [
             Icon(
@@ -47,10 +50,10 @@ class RequestFromAFriend extends StatelessWidget {
                     filled: true,
                     fillColor: ColorManager.kbackground,
                     hintText: '@funzlag:Email or Phone Number',
-                    hintStyle: TextStyle(color: Colors.grey, fontSize: 12),
+                    hintStyle: TextStyle(color: ColorManager.ktext, fontSize: 12),
                     contentPadding: EdgeInsets.symmetric(
                         vertical: 0, horizontal: 16), // Adjust padding as needed
-                    prefixIcon: Icon(Icons.search, color: ColorManager.ktext,),
+                    prefixIcon: Assets.images.searchIcon.image(),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide.none, // Remove border
@@ -70,9 +73,9 @@ class RequestFromAFriend extends StatelessWidget {
                   Navigator.pushNamed(context, RoutesManager.RequestMoney2);
                 },
                 child: Text('Search for any user on Funz to transact with', style: get16TextStyle(
-                  color: ColorManager.kTitleText,
-                  fontSize: 13,
-                  fontWeight: FontWeight.bold
+                  color: ColorManager.kbuttonColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500
                 ),),
               ),
               Gap(30),

@@ -17,6 +17,10 @@ class ColorManager {
   static Color kStroke = HexColor.fromHex("#021B41");
   static Color kWhite = HexColor.fromHex("#F0F6FF");
   static Color kScaffoldB = HexColor.fromHex("#F9F9F9");
+  static Color kpaybills = HexColor.fromHex("#FFF3E8");
+  static Color kgetloans = HexColor.fromHex("#FEFFF0");
+  static Color kSave = HexColor.fromHex("#F0FFF7");
+  static Color kInvest = HexColor.fromHex("#BA68C8");
 
   
 
